@@ -1,0 +1,23 @@
+(function(modules) {
+  var installedModules = {}
+  function __webpack_require__(moduleId) {
+    if(installedModules[moduleId]) {
+      return installedModules[moduleId]
+    }
+    let module = installedModules[moduleId] = {
+      id:moduleId,
+      l: false,
+      exports:{}
+    }
+    modules[moduleId].call(module.exports,module,module.exports,__webpack_require__)
+    installedModules[moduleId] = true
+    return module.exports
+  }
+  return __webpack_require__(__webpack_require__.s = "<%-entry%>")
+})({
+  <%for(let k in modules){%>
+    "<%-k%>":(function(module,exports,__webpack_require__){
+      eval(`<%-modules[k]%>`)
+    }),
+  <%}%>
+})

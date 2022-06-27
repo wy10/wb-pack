@@ -1,0 +1,21 @@
+{
+  "name": "wbpack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "wb-pack": "./bin/wb-pack.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/generator": "^7.18.2",
+    "@babel/parser": "^7.18.5",
+    "@babel/traverse": "^7.18.5",
+    "ejs": "^3.1.8"
+  }
+}
